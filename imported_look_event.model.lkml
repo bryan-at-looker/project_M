@@ -1,5 +1,8 @@
 include: "/thelook_event/thelook.model.lkml"
-include: "/thelook_event/*.view.lkml"         # include all views in this project
+include: "/thelook_event/*.view.lkml"
+include: "ml_invoices.view.lkml"
+include: "ml_invoice_event.view.lkml"
+# include all views in this project
 # include: "*.dashboard.lookml"  # include all dashboards in this project
 
 # # Select the views that should be a part of this model,
@@ -16,6 +19,10 @@ include: "/thelook_event/*.view.lkml"         # include all views in this projec
 #     sql_on: ${users.id} = ${orders.user_id} ;;
 #   }
 # }
+
+explore: ml_invoices {}
+
+explore: ml_invoice_event {}
 
 
 explore: inventory_items2 {
